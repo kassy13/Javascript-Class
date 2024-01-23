@@ -25,3 +25,42 @@ console.log(markHigherBMi);
 
 const inputYear = +"1991";
 console.log(inputYear);
+
+// if (inputYear < 2024) {
+//   greet("james is eligible to vote");
+// } else {
+//   console.log("You are not eligible to vote.");
+// }
+
+// const emailInput = document.getElementById("textEmail");
+
+// emailInput.onfocus = function () {
+//   (emailInput.style.backgroundColor = "green"),
+//     (emailInput.style.color = "white");
+// };
+
+// emailInput.onblur = function () {
+//   (emailInput.style.backgroundColor = "white"),
+//     (emailInput.style.color = "white");
+// };
+
+document.getElementById("textEmail").onfocus = function () {
+  this.style.backgroundColor = "lightblue";
+};
+
+const phoneNumber = document.getElementById("textNumber");
+phoneNumber.addEventListener("focus", function () {
+  this.style.backgroundColor = "lightblue";
+});
+
+//OR
+
+const submitbtn = document.querySelector(".btn");
+
+const handleOnclick = function (e) {
+  e.preventDefault();
+  alert(`you clicked on ${this}`);
+  console.log(this);
+};
+
+submitbtn.addEventListener("click", handleOnclick);

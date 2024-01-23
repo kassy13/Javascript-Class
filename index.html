@@ -3,10 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="js/operators.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+
     <title>Document</title>
   </head>
   <body>
-    <h1>Javascript Operators</h1>
+    <div class="container">
+      <h1>Javascript Operators</h1>
+      <form action="" class="form">
+        <div>
+          <label for="Name"> Name</label>
+          <input
+            type="text"
+            name=""
+            id="textName"
+            placeholder="Enter Name..."
+            onfocus="this.style.backgroundColor='yellow', console.log(this)"
+            onblur="this.style.backgroundColor='white'"
+          />
+        </div>
+
+        <div>
+          <label for="email"> Email</label>
+          <input
+            type="email"
+            name=""
+            id="textEmail"
+            placeholder="Enter Password"
+          />
+        </div>
+        <div>
+          <label for="Phone"> Phone Number</label>
+          <input
+            type="number"
+            name=""
+            id="textNumber"
+            placeholder="Enter Phone number"
+          />
+        </div>
+        <button type="submit" class="btn">Submit</button>
+      </form>
+    </div>
+
+    <script src="js/operators.js"></script>
+    <!-- <script src="js/2 values&variables.js"></script> -->
   </body>
 </html>
