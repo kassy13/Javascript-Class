@@ -1,4 +1,4 @@
-/* so You know some html, css and javascript and you want to put it all together to create rich and reactive user experiences but we are missing one key component , the glue that pulls it all together we call that the Document object model, DOM for short.And it gives ur the ablity to Manipulate our page's content with javascript. 
+/* so You know some html, css and javascript and you want to put it all together to create rich and reactive user experiences but we are missing one key component , the glue that pulls it all together we call that the Document object model, DOM for short.And it gives us the ablity to Manipulate our page's content with javascript. 
 
 ====>>>>>>You obviously know that a web page is just HTML at its most basic level,and the browser is going to load that HTML.. and its going to render it so that users can view the content that we want them to see. but behind the scenes, the browser does a lot more than that . it loads our Html into a set of javascript objects that we can access and we can make changes to our webpage.these objects are called the DOcument Object Model.
 ===========
@@ -7,12 +7,12 @@ we use javascript to access and make changes to the DOM. so the dom gives us acc
 */
 //when we open our console and go to the elements tab,it looks like a source code for our Html but it isnt.this is a representation of the HTML as it is currently loaded within the browser
 // show them that when we click on toggle button the className dark is added or removed depending, this is to show that that the element tab is just a representation of our html as it is currently loaded or rendered in our browser
-// so with the body tag selected lets go to this other panel,and lets find the properties. so remember i said that the dom is just a set of javascript objects, so everything inside the DOM is an object which basically means that those objects will have properties.And we can see here that with the body selected,these are all of the properties that we have access to but one thing i want you to notice is that the term node is being used in quite a few places .that being that everything in the Dom is considered a node. an element is a node, even just plain text is a node and attributes are nodes
+// so with the body tag selected lets go to this other panel,and lets find the PROPERTIES. so remember i said that the dom is just a set of javascript objects, so everything inside the DOM is an object which basically means that those objects will have properties.And we can see here that with the body selected,these are all of the properties that we have access to but one thing i want you to notice is that the term node is being used in quite a few places .that being that everything in the Dom is considered a node. an element is a node, even just plain text is a node and attributes are nodes
 
-//Now going back to the console by typing 'document',it highlights the whole page because the  document is the currently loaded into the browser
+//Now going back to the console by typing 'document',it highlights the whole page because the  document is the currently loaded into the browser and the document is the top most object that we can use to access the DOM.
 //to access the html we do document.documentElement, you can see its still going to highlight everything but its a little diffferent from the document in the sense that document.documentElement refers to root <html> . it provides a way to manipulate properties of the top level html element while document is the entire HTML DOCUMENT ie both <html> <head> <body> elements
 
-/// so then again going to our html lets say i want to select the first element in the html which is a h1 tag which is inside the body .so i can do that by doing document.body.childNodes (all the nodes which are children of the body). when we open that we see our Nodelist but notice that the first child there is a text and not h1 and you might be wondering where its coming from, well like i said even a text is a node and in our case the whitespace
+/// so then again going to our html lets say i want to select the first element in the html which is a h1 tag which is inside the body. i can say that the h1 is the child of the body cant i ? so do that we use the document.body.childNodes (all the nodes which are children of the body). when we open that we see our Nodelist but notice that the first child there is a text and not h1 and you might be wondering where its coming from, well like i said even a text is a node and in our case the whitespace
 
 //different ways to access the h1
 document.body.childNodes[1];
@@ -20,10 +20,10 @@ document.body.firstChild; //the text between body tag and  the h1 element
 document.body.firstChild.nextSibling; //The h1 now; //doing this nested acces is called walking the DOM which is walking from one object to another so we can access yet another object so its kind of difficult to keep walking down a dom tree just to access an element so we nolonger do that rather we have a list of methods that we can use to get or search for certain elements
 
 //Methods for selecting elements in the DOM
-// document.getElementById(); //gets an element based on its id and NOTE IDs are unique and there can only be one id in a document
+// document.getElementById(); //gets an element based on its id and NOTE IDs are unique and there can only be one id in a document.... moving to our js file lets first create a variable called h1el
 let h1El = document.getElementById("dom");
 // so usually whenever we want to retrieve an element its good to store it in a variable so you can easily access it , because you dont want to keep repeating yourself and plus the browser still has to reach into the dom to find that element, so to reduced overworking the browser its good to store our elements in a variable
-h1El.childNodes[0].textContent = "This is the modified Document Object Model"; //h1El.firstchild.textContent
+h1El.childNodes[0].textContent = "This is the modified Document Object Model"; //h1El.firstchild.textContent ||nodevalue
 //when it comes to changing the styles we do so in two ways one.by modifying what is essentially the style attribute or by using classlist and css classes
 h1El.style.color = "green";
 //to select for example all the li elements
